@@ -1,0 +1,47 @@
+body {
+    margin: 2% 5%;
+    background: grey;
+}
+
+title {
+    background: grey;
+}
+
+.jumbotron {
+    text-align: center;
+    background: url("../../assets/images/maxresdefault.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color: black}
+
+h1, p {
+    text-shadow: 0 0 20px #000000;
+}
+
+td {
+    border-right: 2px solid #ddd;
+    border-bottom: 2px solid #ddd;
+    border-top: 0;
+}
+
+th {
+    text-align: center;
+    border-bottom: 2px solid #000000 !important;
+    border-right: 2px solid #000000 !important;
+
+}
+
+th:last-child, td:last-child {
+    border-right: none !important;
+}
+
+.panel, .jumbotron {
+    border: 5px solid black !important;
+    border-radius: 10px;
+}
+
+td {
+    text-align: center;
+}
+© 2019 GitHub, Inc.

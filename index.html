@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="icon" href="assets/images/download.png" type="image/icon type">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js"
+            integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+            crossorigin="anonymous"></script>
+
+    <title>Train Schedule</title>
+</head>
+<body>
+    <div class="jumbotron">
+        <h1>The Quad City DJ Express!!!</h1>
+        <p> C'mon 'N Ride It! Choo Choooo!!! </p>
+        <p id="time"></p>
+    </div>
+
+    <div class="panel panel-primary">
+        <!-- Firebase panel Content-->
+        <div class="panel-heading">Train Schedule</div>
+
+        <!-- Table -->
+        <table class="table">
+            <thead>
+                <tr>
+                    <th> Train Name </th>
+                    <th> Destination </th>
+                    <th> Frequency </th>
+                    <th> Next Arrival </th>
+                    <th> Minutes Away </th>
+                </tr>
+            </thead>
+            <tbody id="table-info">     <!-- Below Insert data the user inputs into firebase -->
+                <!--<tr>-->
+                    <!--<td>  </td>-->
+                    <!--<td>  </td>-->
+                    <!--<td>  </td>-->
+                    <!--<td>  </td>-->
+                    <!--<td>  </td>-->
+                <!--</tr>-->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- New Train panel contents -->
+    <div class="panel panel-primary">
+        <div class="panel-heading">Add A Train</div>
+        <div class="panel-body">
+            <div class="form-group">
+                <label for="trainNameInput"> Train Name </label>
+                <input type="text" class="form-control" id="trainNameInput" placeholder="Enter Train Name Here"/>
+            </div>
+
+            <div class="form-group">
+                <label for="destinationInput">Destination</label>
+                <input type="text" class="form-control" id="destinationInput" placeholder="Where To"/>
+            </div>
+
+            <div class="form-group">
+                <label for="firstTrainTimeInput"> First Train Time (HH:mm - Military Time)</label> <br>
+                <input type="time" class="form-control" id="firstTrainTimeInput" placeholder="00:00"/>
+            </div>
+
+            <div class="form-group">
+                <label for="frequencyInput">Frequency</label>
+                <input type="number" class="form-control" id="frequencyInput" placeholder="Enter Value Of Minutes (Not 0)"/>
+            </div>
+
+            <p><a class="btn btn-primary btn-md" id="title-button" href="#" role="button">Click Here 1st!!!</a></p>
+            <button type="submit" class="btn btn-primary" id="submitButton" >Submit</button>
+            
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/momentjs/2.18.1/moment.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+    <script src="assets/javascript/train.js"></script>
+
+</body>
+</html>
