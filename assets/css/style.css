@@ -1,6 +1,6 @@
 body {
     margin: 2% 5%;
-    background: grey;
+    background: white;
 }
 
 title {
@@ -44,4 +44,8 @@ th:last-child, td:last-child {
 td {
     text-align: center;
 }
-© 2019 GitHub, Inc.
+
+footer {
+    text-align: center;
+    color: black;
+}

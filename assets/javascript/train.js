@@ -12,7 +12,7 @@ $(document).ready(function () {
 
 
 
-//1st We need some classic train music by the Quad City DJ's
+//1st We need some classic train music by the Quad City DJ's *** I do not own this song ***
 const theme = new Audio("assets/qcdj.mp3");
 var musicPlaying = false;
 
@@ -64,28 +64,9 @@ $("#title-button").on("click", function() {
         frequency = $("#frequencyInput").val().trim();
 
 
-//******************** Military Time Not Working************************************************************************
-    // //    Check if value inside is valid. If Valid continue otherwise STOP
-    //     if (name === "" || name === null ||
-    //         destination === "" || destination === null ||
-    //         firstArrival === "" || firstArrival === null ||
-    //         frequency === "" || frequency === null || frequency === 0) {
-    //         alert("Please kindly enter a valid response in ALL fields.... OR ELSE" , denied.play());
-    //         return false;
-    //     }
-    //
-    // //    Check if time is in military time and that they are numbers
-    //     if (firstArrival.length != 5 || parseInt(firstArrival.substr(0,2)) > 23 || parseInt(firstArrival.substr(0,2)) < 0 ||
-    //         parseInt(firstArrival.substr(3,2)) > 59 || parseInt(firstArrival.substr(3,2)) < 0) {
-    //         alert("Check Yo Time Format Fool!" , denied.play());
-    //         return false;
-    //     } else if (isNaN(parseInt(firstArrival.substr(0,2))) || isNaN(parseInt(firstArrival.substr(3,2)))) {
-    //         alert("Only Numbers Fool!" , denied.play());
-    //         return false;
-    //     }
-    //
+
         console.log(firstArrival);
-//**********************************************************************************************************************
+
 
 
 
@@ -136,37 +117,4 @@ $("#title-button").on("click", function() {
         $("#firstTrainTimeInput").val("");
         $("#frequencyInput").val("");
     }
-
-
-//********************This is not working so trying somthing differenct*************************************************
-
-        // var row = $("<tr>");
-        // row.addClass("new-table-row");
-        //
-        // var trainData = $("<td>");
-        // var destinationData = $("<td>");
-        // var frequencyData = $("<td>");
-        // var nextData = $("<td>");
-        // var minutesData = $("<td>");
-
-        // trainData.text(name);
-        // destinationData.text(destination);
-        // frequencyData.text(frequency);
-
-        // row.append(trainData);
-        // row.append(destination);
-        // row.append(frequency);
-//**********************************************************************************************************************
-
 });
-
-//****************Link Pull From Firebase*******************************************************************************
-// database.ref("Train-Scheduler-App").on("value", function(snapshot) {
-//     newFirebaseData = snapshot.val();
-//     console.log(newFirebaseData.trainName);
-//     var fireBaseName = trainFirebaseData.trainName;
-//     var fireBaseDest = trainFirebaseData.destination;
-//     var fireBaseFreq = trainFirebaseData.frequency;
-//     $("#table-info").append("<tr><td>" + fireBaseName +"</td><td>" + fireBaseDest + "</td><td>" + fireBaseFreq + "</td>");
-//
-// });
